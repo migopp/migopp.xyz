@@ -1,0 +1,131 @@
+:root {
+    --white-bg: #ffffff;
+    --black-tx: #413839;
+    --borange-hi: #bf5700;
+    --orange-hi: #f8971f;
+    --green-hi: #a6cd57;
+    --blue-hi: #00a9b7;
+    --dblue-hi: #005f86;
+}
+
+html {
+    background-color: var(--white-bg);
+    color: var(--black-tx);
+    font-family: source-sans-pro;
+    font-size: 18px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+main {
+    padding-bottom: 3rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.25rem;
+    padding-bottom: 0.1rem;
+    border-style: none none double none;
+    border-width: 0.15rem;
+}
+
+.nav__home {
+    color: var(--black-tx);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.nav__home:hover {
+    color: var(--borange-hi);
+}
+
+.nav__programming,
+.nav__mathematics,
+.nav__blog {
+    color: var(--white-tx);
+    font-size: 1.25rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav__programming:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--orange-hi);
+}
+
+.nav__mathematics:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--green-hi);
+}
+
+.nav__blog:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--blue-hi);
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.paraimage__pair {
+    display: flex;
+    flex-direction: row;
+}
+
+.boston__img {
+    max-width: 25%;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+}
+
+.para__link {
+    color: var(--black-tx);
+    text-decoration: underline;
+    text-decoration-color: var(--borange-hi);
+}
+
+.para__link:hover {
+    color: var(--borange-hi);
+}
+
+.fnref__link {
+    color: var(--borange-hi);
+    text-decoration: none;
+}
+
+.fnref__link:hover {
+    text-decoration: underline;
+}
+
+.fntitle {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.footnotes {
+    padding-top: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 0px;
+    border-style: dotted none dotted none;
+}
+
+.notes {
+    display: grid;
+    row-gap: 0px;
+}
+
+.note {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+}
+
+footer {
+    text-align: center;
+}
