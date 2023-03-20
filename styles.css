@@ -1,11 +1,13 @@
 :root {
     --white-bg: #ffffff;
+    --orange-bg: #f8961f4f;
     --black-tx: #413839;
     --borange-hi: #bf5700;
-    --orange-hi: #f8971f;
+    --orange-hi: #f8961f;
     --green-hi: #a6cd57;
     --blue-hi: #00a9b7;
     --dblue-hi: #005f86;
+    --grey-hi: #9cadb7;
 }
 
 html {
@@ -30,7 +32,7 @@ nav {
     border-width: 0.15rem;
 }
 
-.nav__home {
+.nav-home {
     color: var(--black-tx);
     font-size: 1.75rem;
     font-weight: 700;
@@ -38,32 +40,32 @@ nav {
     text-decoration: none;
 }
 
-.nav__home:hover {
+.nav-home:hover {
     color: var(--borange-hi);
 }
 
-.nav__programming,
-.nav__mathematics,
-.nav__blog {
+.nav-programming,
+.nav-mathematics,
+.nav-blog {
     color: var(--white-tx);
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
-.nav__programming:hover {
+.nav-programming:hover {
     text-decoration: underline;
     text-decoration-color: var(--orange-hi);
 }
 
-.nav__mathematics:hover {
+.nav-mathematics:hover {
     text-decoration: underline;
     text-decoration-color: var(--green-hi);
 }
 
-.nav__blog:hover {
+.nav-blog:hover {
     text-decoration: underline;
     text-decoration-color: var(--blue-hi);
 }
@@ -73,33 +75,33 @@ h1 {
     font-size: 2.5rem;
 }
 
-.paraimage__pair {
+.paraimage-pair {
     display: flex;
     flex-direction: row;
 }
 
-.boston__img {
+.boston-img {
     max-width: 25%;
     padding-right: 3rem;
     padding-bottom: 1rem;
 }
 
-.para__link {
+.para-link {
     color: var(--black-tx);
     text-decoration: underline;
     text-decoration-color: var(--borange-hi);
 }
 
-.para__link:hover {
+.para-link:hover {
     color: var(--borange-hi);
 }
 
-.fnref__link {
+.fnref-link {
     color: var(--borange-hi);
     text-decoration: none;
 }
 
-.fnref__link:hover {
+.fnref-link:hover {
     text-decoration: underline;
 }
 
@@ -124,6 +126,35 @@ h1 {
     display: flex;
     flex-direction: row;
     column-gap: 0.5rem;
+}
+
+.note-hi:hover {
+    background-color: var(--orange-bg);
+    border-color: var(--borange-hi);
+}
+
+.blogpost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: dashed none dashed none;
+    margin-bottom: 0.5rem;
+}
+
+.blogpost-link {
+    color: var(--black-tx);
+    text-decoration: none;
+}
+
+.blogpost-link:hover {
+    color: var(--borange-hi);
+    text-decoration: underline;
+}
+
+.blog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 footer {
