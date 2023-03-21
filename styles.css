@@ -86,6 +86,10 @@ h1 {
     padding-bottom: 1rem;
 }
 
+.interests-module {
+    padding-bottom: 2rem;
+}
+
 .para-link {
     color: var(--black-tx);
     text-decoration: underline;
