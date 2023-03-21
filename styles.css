@@ -44,7 +44,7 @@ nav {
     color: var(--borange-hi);
 }
 
-.nav-programming,
+.nav-computing,
 .nav-mathematics,
 .nav-blog {
     color: var(--white-tx);
@@ -55,7 +55,7 @@ nav {
     text-decoration: none;
 }
 
-.nav-programming:hover {
+.nav-computing:hover {
     text-decoration: underline;
     text-decoration-color: var(--orange-hi);
 }
