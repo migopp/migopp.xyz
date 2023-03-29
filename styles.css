@@ -80,6 +80,12 @@ h1 {
     flex-direction: row;
 }
 
+.blog-img {
+    max-width: 250px;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
 .boston-img {
     max-width: 25%;
     padding-right: 3rem;
