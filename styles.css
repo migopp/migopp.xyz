@@ -2,6 +2,7 @@
     --white-bg: #ffffff;
     --orange-bg: #f8961f4f;
     --black-tx: #413839;
+    --beige-bg: #E8DED1;
     --borange-hi: #bf5700;
     --orange-hi: #f8961f;
     --green-hi: #a6cd57;
@@ -118,6 +119,15 @@ h1 {
 .fntitle {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.blog-quote {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    background-color: var(--beige-bg);
+    border-radius: 5px;
 }
 
 .footnotes {
