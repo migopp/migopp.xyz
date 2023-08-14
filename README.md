@@ -1,4 +1,4 @@
 # Michael Goppert's Website
-This is the GitHub repository for my personal website (<https://migopp.xyz>). It's a pretty bare-bones construction, I know—just a fairly simple series of HTML/CSS webpages.
+This is the GitHub repository for my personal home on the Internet (<https://migopp.xyz>).
 
-As I become more advanced in the ways of web development, so too will this website grow. This is only a starting point.
+It's developed entirely by me with plain 'ol HTML and CSS—no scripts as of now. It's currently in its second rendition, and I only plan on expanding on it from here. As my skills grow, it shall grow too.
