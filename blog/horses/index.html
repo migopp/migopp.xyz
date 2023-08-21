@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Horses</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="description" content="A fallacious introduction to induction." />
+    <link rel="icon" href="/images/favicon.svg" />
+  </head>
+  <body>
+    <div class="page-layout">
+      <header>
+        <h1>
+          <a href="/" class="migopp">~/migopp</a>
+        </h1>
+      </header>
+      <article>
+        <div class="section">
+          <h1 class="page-title">All Horses Are The Same Color</h1>
+          <h5>August 20, 2023</h5>
+        </div>
+        <section>
+          <p>It's true—preposterous, but true. All horses are the same color.</p>
+          <h2>Argument</h2>
+          <p>
+            For a population of 1 horse, we can say for certain that it has the same color as
+            itself. Assume that any group of
+            <em>n</em> horses all have the same color, where <em>n</em> is an arbitrary positive
+            integer <a href="#note-1" id="sup-1"><sup>1</sup></a
+            >. Now, consider a population of <em>n</em> + 1 horses.
+          </p>
+          <img src="/blog/horses/images/horses.png" class="banner" />
+          <p>
+            We can split the
+            <em>n</em> + 1 horses into two groups, the first <em>n</em> horses, and the last
+            <em>n</em>
+            horses—as shown below:
+          </p>
+          <img src="/blog/horses/images/horses-first-n.png" class="banner" />
+          <img src="/blog/horses/images/horses-last-n.png" class="banner" />
+          <p>
+            In either case, we know that each set contains all of the same color because of our
+            assumption <a href="#note-2" id="sup-2"><sup>2</sup></a
+            >. Since the first horse is the same color as the middle horses, and the last horse is
+            the same color as the middle horses, the first and last horses must be the same
+            color—and, of course, must share the same color as the middle horses. So, all
+            <em>n</em> + 1 horses are the same color. So, the existence of a group of
+            <em>n</em> horses of the same color implies that a group of <em>n</em> + 1 horses will
+            have the same color. So, any amount of horses will have the same color. All horses have
+            the same color, if you will. QED, proof done—shown beyond a reasonable doubt.
+          </p>
+          <p>Right?</p>
+        </section>
+        <div class="section">
+          <h2>Fallacy</h2>
+          <p>
+            Of course not. I lied. We know that not
+            <em>all</em> horses are the same color. There are white horses, brown horses, grey
+            horses, and pink <a href="#note-3" id="sup-3"><sup>3</sup></a> horses: among many other
+            kinds.
+          </p>
+          <p>So, how is our argument flawed?</p>
+          <p>
+            The underlying method of proving this bologna assertion is actually a valid way of
+            proving properties for
+            <em>all</em> objects with assumed shared characteristics. It's called induction. The
+            idea is that, if you can prove a property holds for one object (called verifying the
+            base case), and that the veracity holds while adding another object (the inductive
+            step), you can prove that statement for <em>all</em> of the objects—because, you could
+            continue repeating the inductive step forever.
+          </p>
+          <p>
+            The assumption is also not flawed. This is a crucial part of induction, but if you have
+            proven the base case to be truthful, then the arbitrary
+            <em>n</em> could be chosen as that base case. In that situation, you are simply proving
+            that the base case implies the following one. It's nothing extraordinary, though it
+            seems to be on the outset.
+          </p>
+          <p>
+            In fact, our proof works for
+            <em>almost</em> all <em>n</em>. All, but a single value. For the value <em>n</em> + 1 =
+            2, (or, more simply <em>n</em> = 1), the inductive step does not work because there
+            <em>are no</em> middle horses to compare the starting and ending horses to. In this
+            case, not considering everything on the small scale hindered our ability to recognize
+            dissonance on the large scale. In fact, the truly vital case was not the case where
+            there was one horse, but the case where there <em>became</em> multiple of them. That is
+            truly the shift that deserves special attention.
+          </p>
+          <p>
+            It's easy (in the way that I've presented this proof) to be
+            <a
+              href="https://www.youtube.com/watch?v=D3E5CKebKuQ&ab_channel=MITOpenCourseWare"
+              class="in-text-link"
+              >“misled by the ellipsis”</a
+            >
+            as Albert Meyer put it. We assume that the small scales to the large, so we need not
+            consider it. We assumed that proving it for
+            <em>all</em> horses required of thinking large, thinking of the case where there are a
+            lot of them and they ought to differ from each other somehow. We assumed a lot of horses
+            were behind the three dots; however, as we've seen, the vital case is—perhaps
+            perplexingly—the inverse.
+          </p>
+          <p>
+            So, as you've seen, with a little trick, something absurd can seem true. Such is the
+            case with many fallacious arguments, so being able to break everything down and
+            understand each component is of the utmost importance.
+          </p>
+        </div>
+        <div class="section">
+          <h2>Mooov-In</h2>
+          <img src="/blog/horses/images/horses-banner.jpg" class="banner" />
+          <p>
+            This blogpost was released a few days later than I expected for it to be; I thought that
+            I would have plenty of time to finish between the time I moved in and when college
+            started. However, it went a bit differently than I expected, to say the least.
+          </p>
+          <p>
+            I have spent the past few days meeting some wonderful people in Turing, and trying to
+            get to know each one of them. I've had some great experiences already, like meetups with
+            '27 meetups with Christopher in GDC 5.302, a mysterious tour of the CS sever room
+            <a href="#note-4" id="sup-4"><sup>4</sup></a> three-hour meals in Kins, morning walks to
+            Target, and midnight climbing of the MechE building for a closer look at the night sky.
+            I couldn't have been any more grateful to be a part of Turing. Even if the classes in
+            the next couple years are incredibly difficult and rigorous, we have each other, and
+            maybe that's enough. As of today, I'm Gone To Texas: Hook 'Em. 🤘
+          </p>
+        </div>
+        <div class="section">
+          <h2>Footnotes</h2>
+          <ol>
+            <li id="note-1">
+              <p>
+                I know, this seems fishy, but this is actually not the issue with the proof—mostly.
+                <a href="#sup-1">^</a>
+              </p>
+            </li>
+            <li id="note-2">
+              <p>
+                This is strange, but our assumption is that
+                <em>any</em> group of <em>n</em> horses has the same color.
+                <a href="#sup-2">^</a>
+              </p>
+            </li>
+            <li id="note-3">
+              <p>
+                In My Little Pony, but I bet someone has made one in real life as well.
+                <a href="#sup-3">^</a>
+              </p>
+            </li>
+            <li id="note-4">
+              <p>
+                Given by this dude we met named Matt—shoutout to him.
+                <a href="#sup-4">^</a>
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="section">
+          <a href="/blog/"><~ Go back to all blogposts</a>
+        </div>
+      </article>
+      <footer>
+        <p>
+          <a href="https://linkedin.com/in/migopp">LinkedIn</a>
+          |
+          <a href="https://github.com/migopp">GitHub</a>
+          |
+          <a href="mailto:goppert@utexas.edu">goppert@utexas.edu</a>
+        </p>
+        <p>&copy; 2023 Michael Goppert</p>
+      </footer>
+    </div>
+  </body>
+</html>
