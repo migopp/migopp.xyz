@@ -109,6 +109,11 @@
   cursor: text;
 }
 
+.unlinked-proj {
+  font-family: var(--text-body);
+  font-weight: 700;
+}
+
 header {
   margin: 1em 0 1.5em;
 }
