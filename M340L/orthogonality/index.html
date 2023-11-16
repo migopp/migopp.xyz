@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Orthogonality</title>
+    <link rel="stylesheet" href="/M340L/M340L.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+      type="text/javascript"
+    ></script>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav id="TOC" role="doc-toc">
+      <ul>
+        <li>
+          <a href="#orthogonality" id="toc-orthogonality">Orthogonality</a>
+          <ul>
+            <li>
+              <a href="#orthonormal-vectors" id="toc-orthonormal-vectors"
+                >Orthonormal Vectors</a
+              >
+            </li>
+            <li>
+              <a href="#orthonormal-bases" id="toc-orthonormal-bases"
+                >Orthonormal Bases</a
+              >
+            </li>
+            <li>
+              <a
+                href="#the-orthogonal-matrix-q"
+                id="toc-the-orthogonal-matrix-q"
+                >The Orthogonal Matrix:
+                <span class="math inline">\(Q\)</span></a
+              >
+            </li>
+            <li>
+              <a href="#projections-onto-q" id="toc-projections-onto-q"
+                >Projections onto <span class="math inline">\(Q\)</span></a
+              >
+              <ul>
+                <li>
+                  <a href="#pt" id="toc-pt"
+                    ><span class="math inline">\(P^T\)</span>:</a
+                  >
+                </li>
+                <li>
+                  <a href="#p2" id="toc-p2"
+                    ><span class="math inline">\(P^2\)</span>:</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#gram-schmidt" id="toc-gram-schmidt">Gram-Schmidt</a>
+            </li>
+            <li>
+              <a
+                href="#the-orthogonal-decomposition-aqr"
+                id="toc-the-orthogonal-decomposition-aqr"
+                >The Orthogonal Decomposition:
+                <span class="math inline">\(A=QR\)</span></a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <h1 id="orthogonality">Orthogonality</h1>
+    <h2 id="orthonormal-vectors">Orthonormal Vectors</h2>
+    <p>
+      Recall that <span class="math inline">\(u\)</span> and
+      <span class="math inline">\(v\)</span> are orthogonal vectors if
+      <span class="math inline">\(u \cdot v = 0\)</span>. If
+      <span class="math inline">\(u\)</span> and
+      <span class="math inline">\(v\)</span> are orthonormal, then they have the
+      added constraint of being unit vectors, or normalized.
+    </p>
+    <p>
+      A vector is typically denoted with a
+      <span class="math inline">\(q\)</span> if it is orthonormal. Here is a
+      simple definition:
+    </p>
+    <p>
+      <span class="math display"
+        >\[ q_i^Tq_j= \begin{cases} 0 &amp; i \not = j \\ 1 &amp; i = j
+        \end{cases} \]</span
+      >
+    </p>
+    <h2 id="orthonormal-bases">Orthonormal Bases</h2>
+    <p>
+      An orthonormal basis is a basis composed of solely orthonormal vectors.
+    </p>
+    <p>
+      <span class="math display"
+        >\[ \mathcal{C}(Q)=\textrm{Span}\{q_1, \dots, q_n\} \]</span
+      >
+    </p>
+    <h2 id="the-orthogonal-matrix-q">
+      The Orthogonal Matrix: <span class="math inline">\(Q\)</span>
+    </h2>
+    <p>
+      Define <span class="math inline">\(Q\)</span> to have be square and have
+      exclusively orthonormal columns:
+    </p>
+    <p>
+      <span class="math display"
+        >\[ Q= \begin{bmatrix} \vert &amp; \hspace{1em} &amp; \vert \\ q_1 &amp;
+        \dots &amp; q_n \\ \vert &amp; \hspace{1em} &amp; \vert \\ \end{bmatrix}
+        \]</span
+      >
+    </p>
+    <p>Then, we can find that:</p>
+    <p>
+      <span class="math display"
+        >\[ Q^TQ= \begin{bmatrix} — &amp; q_1^T &amp; — \\ \hspace{1em} &amp;
+        \vdots &amp; \hspace{1em} \\ — &amp; q_n^T &amp; —\\ \end{bmatrix}
+        \begin{bmatrix} \vert &amp; \hspace{1em} &amp; \vert \\ q_1 &amp; \dots
+        &amp; q_n \\ \vert &amp; \hspace{1em} &amp; \vert \\ \end{bmatrix} = I
+        \]</span
+      >
+    </p>
+    <p>
+      Let <span class="math inline">\(O\)</span> be a non-square matrix
+      containing exclusively orthonormal column vectors. Then
+      <span class="math inline">\(O^TO=I\)</span> still holds.
+    </p>
+    <p>
+      However, if <span class="math inline">\(Q\)</span> is square, then we know
+      from <span class="math inline">\(Q^TQ=I\)</span> that
+      <span class="math inline">\(Q^T=Q^{-1}\)</span>.
+    </p>
+    <h2 id="projections-onto-q">
+      Projections onto <span class="math inline">\(Q\)</span>
+    </h2>
+    <p>
+      Suppose <span class="math inline">\(Q\)</span> has orthonormal columns.
+      Projecting onto <span class="math inline">\(\mathcal{C}(Q)\)</span>:
+    </p>
+    <p><span class="math display">\[ P=Q(Q^TQ)^{-1}Q^T \]</span></p>
+    <p>But, <span class="math inline">\(Q^TQ=I\)</span>, so:</p>
+    <p><span class="math display">\[ P=QQ^T \]</span></p>
+    <p>
+      And we know that if <span class="math inline">\(Q\)</span> is an
+      orthogonal matrix, then <span class="math inline">\(P=I\)</span>.
+    </p>
+    <p>
+      We can also show that this definition upholds the fundamental properties
+      of projection matrices.
+    </p>
+    <h3 id="pt"><span class="math inline">\(P^T\)</span>:</h3>
+    <p>
+      <span class="math display"
+        >\[ \begin{align*} (QQ^T)^T &amp;= Q^{T^T}Q^T \\ &amp;= QQ^T \\
+        \end{align*} \]</span
+      >
+    </p>
+    <h3 id="p2"><span class="math inline">\(P^2\)</span>:</h3>
+    <p>
+      <span class="math display"
+        >\[ \begin{align*} (QQ^T)(QQ^T) &amp;= Q\cancel{(Q^TQ)}Q^T \\ &amp;=
+        QQ^T \end{align*} \]</span
+      >
+    </p>
+    <h2 id="gram-schmidt">Gram-Schmidt</h2>
+    <p>
+      Consider independent vectors <span class="math inline">\(a\)</span> and
+      <span class="math inline">\(b\)</span>. To produce two orthogonal vectors
+      <span class="math inline">\(a&#39;\)</span> and
+      <span class="math inline">\(b&#39;\)</span>, utilize the Gram-Schmidt
+      algorithm as follows.
+    </p>
+    <p>
+      Let <span class="math inline">\(a&#39;=a\)</span>. Then, we must solve for
+      <span class="math inline">\(b&#39;\)</span> s.t.
+      <span class="math inline">\(b&#39; \perp a&#39;\)</span>. Recall that
+      <span class="math inline"
+        >\(e=b-\textrm{proj}_{a&#39;}b \perp a&#39;\)</span
+      >. So,
+    </p>
+    <p>
+      <span class="math display"
+        >\[ b&#39; = (\frac{a&#39;a&#39;^T}{a&#39;^Ta&#39;})b \]</span
+      >
+    </p>
+    <p>
+      Now, add a third independent vector
+      <span class="math inline">\(c\)</span>. Note that
+      <span class="math inline">\(c&#39;\)</span> must be perpendicular to both
+      <span class="math inline">\(a&#39;\)</span> and
+      <span class="math inline">\(b&#39;\)</span>. This is accomplished by
+      removing the components of <span class="math inline">\(c\)</span> which
+      project onto <span class="math inline">\(a&#39;\)</span> and
+      <span class="math inline">\(b&#39;\)</span>:
+    </p>
+    <p>
+      <span class="math display"
+        >\[
+        c&#39;=c-(\frac{a&#39;a&#39;^T}{a&#39;^Ta&#39;})c-(\frac{b&#39;b&#39;^T}{b&#39;^Tb&#39;})c
+        \]</span
+      >
+    </p>
+    <p>
+      This pattern continues for all higher dimensions. Gram-Schmidt tells us to
+      kill components that project onto the other orthogonal components.
+    </p>
+    <p>
+      Further, all of <span class="math inline">\(a&#39;\)</span>,
+      <span class="math inline">\(b&#39;\)</span>, and
+      <span class="math inline">\(c&#39;\)</span> can be turned into orthonormal
+      vectors <span class="math inline">\(q_a\)</span>,
+      <span class="math inline">\(q_b\)</span>, and
+      <span class="math inline">\(q_c\)</span> by normalizing them:
+    </p>
+    <p>
+      <span class="math display"
+        >\[ q_a = \frac{a&#39;}{\lVert a&#39; \rVert} \hspace{1em} q_b =
+        \frac{b&#39;}{\lVert b&#39; \rVert} \hspace{1em} q_c =
+        \frac{c&#39;}{\lVert c&#39; \rVert} \]</span
+      >
+    </p>
+    <p>
+      Then, <span class="math inline">\(q_a\)</span>,
+      <span class="math inline">\(q_b\)</span>, and
+      <span class="math inline">\(q_c\)</span> form an orthonormal basis
+      described by the orthogonal matrix <span class="math inline">\(Q\)</span>:
+    </p>
+    <p>
+      <span class="math display"
+        >\[ \begin{bmatrix} \vert &amp; \vert &amp; \vert \\ q_a &amp; q_b &amp;
+        q_c \\ \vert &amp; \vert &amp; \vert \end{bmatrix} \]</span
+      >
+    </p>
+    <h2 id="the-orthogonal-decomposition-aqr">
+      The Orthogonal Decomposition: <span class="math inline">\(A=QR\)</span>
+    </h2>
+    <p>
+      Note that <span class="math inline">\(A\)</span> and
+      <span class="math inline">\(Q\)</span> have the same column space. This is
+      because their bases represent the same subspace—<span class="math inline"
+        >\(Q\)</span
+      >
+      has simply been constructed from orthogonal components of
+      <span class="math inline">\(A\)</span>.
+    </p>
+    <p>
+      Suppose <span class="math inline">\(A\)</span> has two column vectors
+      <span class="math inline">\(a_1\)</span> and
+      <span class="math inline">\(a_2\)</span>. Then,
+    </p>
+    <p>
+      <span class="math display"
+        >\[ \begin{bmatrix} \vert &amp; \vert \\ a_1 &amp; a_2 \\ \vert &amp;
+        \vert \end{bmatrix} = \begin{bmatrix} \vert &amp; \vert \\ q_1 &amp; q_2
+        \\ \vert &amp; \vert \end{bmatrix} \begin{bmatrix} a_1^Tq_1 &amp;
+        a_2^Tq_1 \\ a_1^Tq_2 &amp; a_2^Tq_2 \end{bmatrix} \]</span
+      >
+    </p>
+    <p>
+      Then, this <span class="math inline">\(R\)</span> inner product matrix of
+      <span class="math inline">\(A\)</span> and
+      <span class="math inline">\(Q\)</span> is upper-triangular because all
+      later orthonormal basis vectors were constructed to be perpendicular to
+      all earlier ones.
+    </p>
+    <p>
+      As a sanity check, we can prove this decomposition to ourselves as
+      follows:
+    </p>
+    <p><span class="math display">\[A=QR\]</span></p>
+    <p><span class="math display">\[Q^{-1}A=R\]</span></p>
+    <p><span class="math display">\[Q^TA=R\]</span></p>
+    <p>
+      <span class="math display"
+        >\[ \begin{align*} \begin{bmatrix} — &amp; q_1^T &amp; — \\ — &amp;
+        q_2^T &amp; — \end{bmatrix} \begin{bmatrix} \vert &amp; \vert \\ a_1
+        &amp; a_2 \\ \vert &amp; \vert \end{bmatrix}&amp;=R \\ &amp;=
+        \begin{bmatrix} q_1^Ta_1 &amp; q_1^Ta_2 \\ q_2^Ta_1 &amp; q_2^Ta_2
+        \end{bmatrix} \end{align*} \]</span
+      >
+    </p>
+  </body>
+</html>
